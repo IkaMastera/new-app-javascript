@@ -65,3 +65,11 @@ const selectCategory = (e, category) => {
   e.target.classList.add(".active");
   getNews();
 };
+
+const createOptions = () => {
+  for (let i of options) {
+    optionsContainer.innerHTML += `<button class="options" ${
+      i == "general" ? "active" : ""
+    }" onclick="selectCategory(event, '${i}')">${i}</button>`;
+  }
+};
