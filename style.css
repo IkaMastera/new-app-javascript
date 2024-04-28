@@ -25,6 +25,7 @@ img {
   width: 100%;
   text-align: center;
   box-shadow: 0 10px 50px 0 rgba(2, 0, 31, 0.3);
+  z-index: 1;
 }
 
 .heading-container h4 {
@@ -106,4 +107,10 @@ img {
 .active {
   background-color: #cb202d;
   color: #ffffff;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
